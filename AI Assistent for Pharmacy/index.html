@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Pharmacy
+  </title>
+  <link rel="icon" type="logo" href="/img/Logo.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="chat_bot.css">
+</head>
+
+<body>
+
+  <!-- Nav -->
+  <nav class="main-nav">
+    <ul class="main-menu">
+      <li>
+        <a href="#Home">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#medicine-section">
+          Medicines
+        </a>
+      </li>
+      <li>
+        <a href="#Health">
+          Health Life
+        </a>
+      </li>
+      <li>
+        <a href="#AI_Assistent">
+          AI Assistent
+        </a>
+      </li>
+      <li>
+        <a href="#footer">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <!-- Registration Form -->
+  <div id="registration-form" class="registration-form">
+    <span class="close-btn" onclick="closeForm()">
+      &times;
+    </span>
+    <h2>
+      Register
+    </h2>
+    <div class="form-content">
+      <div class="form-image">
+        <img src="/img/Register.png" alt="Your Image">
+      </div>
+      <div class="form-fields">
+        <label for="fname">
+          First Name:
+        </label>
+        <input type="text" id="fname" name="fname" required>
+        <label for="lname">
+          Last Name:
+        </label>
+        <input type="text" id="lname" name="lname" required>
+        <label for="email">
+          Email:
+        </label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">
+          Phone:
+        </label>
+        <input type="tel" id="phone" name="phone" required>
+        <button type="button" onclick="register()">
+          Register
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="success-message" class="success-message">
+    <span class="close-btn" onclick="closeSuccessMessage()">
+      &times;
+    </span>
+    <p>
+      Congratulations!
+      <br>
+      You have registered successfully. Wait for our contact.
+    </p>
+  </div>
+  <div class="container">
+
+
+    <!-- Main Page -->
+    <div id="Home" class="main">
+      <div class="left">
+      </div>
+      <div class="left-side">
+        <div class="circles-container">
+          <!-- Stilurile pentru cercurile albe cu opacitate -->
+          <div class="circle-before">
+          </div>
+          <div class="circle-after">
+          </div>
+        </div>
+        <div class="slider-container" id="slider-container">
+          <div class="slider-item active slide1" id="slide1">
+            <div class="img-right">
+              <img src="/img/Doctor.png" alt="pharmacist" />
+            </div>
+            <div class="text">
+              <h3>
+                We work to take care of your health and body
+              </h3>
+              <h1>
+                "Empowering Health with Expertise and AI: Your Wellness Journey Starts
+                Here!"
+              </h1>
+              <p>
+                Welcome to our online pharmacy, where we seamlessly blend pharmaceutical
+                expertise and cutting-edge AI technology to provide personalized health
+                solutions, ensuring your well-being is our foremost commitment
+              </p>
+            </div>
+          </div>
+          <div class="slider-item active slide2" id="slide2">
+            <div class="img-right-1">
+              <img src="/img/Drugs.png" alt="pharmacist" />
+            </div>
+            <div class="text1">
+              <h1>
+                "Healing Tomorrow, Today: Elevate Your Health with Our Trusted Medications!"
+              </h1>
+              <p>
+                Step into a realm of enhanced well-being with our meticulously curated
+                medications. We seamlessly intertwine the time-tested principles of healing
+                with cutting-edge innovations, ensuring not just treatment, but a transformative
+                journey towards a healthier today and a brighter tomorrow.
+              </p>
+            </div>
+          </div>
+          <div class="slider-item active slide3" id="slide3">
+            <div class="img-right-2">
+              <img src="/img/Future-Medicine.png" alt="pharmacist" />
+            </div>
+            <div class="text2">
+              <h1>
+                "Pioneering Care, Powered by AI: Your Partner in Personalized Health Excellence!"
+              </h1>
+              <p>
+                Experience the future of customer support with our AI-powered chatbot.
+                Providing instant assistance and personalized guidance, our chatbot is
+                here to enhance your experience, making health inquiries easier and more
+                accessible
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Puncte clickabile -->
+        <div class="slider-dots">
+          <span class="dot" onclick="onDotClick(1)">
+          </span>
+          <span class="dot" onclick="onDotClick(2)">
+          </span>
+          <span class="dot" onclick="onDotClick(3)">
+          </span>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="shape-top">
+          <div class="content-txt-top">
+            <h1>
+              PREMIUM
+            </h1>
+            <h3>
+              HEALTH
+            </h3>
+            <h3>
+              GUIDANCE
+            </h3>
+          </div>
+          <div class="content-img-top">
+            <img src="/img/Heart.png" alt="" />
+          </div>
+        </div>
+        <div class="shape-bottom" onclick="openForm()">
+          <div class="content-txt">
+            <h1>
+              FREE
+            </h1>
+            <h3>
+              CONSULTATION
+            </h3>
+          </div>
+          <div class="content-img">
+            <img src="/img/Stethoscope.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Care of your health -->
+    <div id="Health" class="health-page">
+      <div class="health-title">
+        Measures for a Healthy Life
+      </div>
+      <div class="health-shapes">
+        <div class="health-shape">
+          <div class="health-icon">
+            <img src="/img/HealthPage/icons8-nutrition-100.png" alt="">
+          </div>
+          <div class="health-text">
+            Nutrition
+          </div>
+          <div class="health-info">
+            Maintain a balanced diet rich in nutrients for overall health and vitality.
+          </div>
+        </div>
+        <div class="health-shape">
+          <div class="health-icon">
+            <img src="/img/HealthPage/icons8-exercise-100.png" alt="">
+          </div>
+          <div class="health-text">
+            Exercise
+          </div>
+          <div class="health-info">
+            Incorporate regular physical activity to enhance physical and mental well-being.
+          </div>
+        </div>
+        <div class="health-shape">
+          <div class="health-icon">
+            <img src="/img/HealthPage/icons8-sleeping-in-bed-100.png" alt="">
+          </div>
+          <div class="health-text">
+            Rest
+          </div>
+          <div class="health-info">
+            Prioritize sufficient sleep and relaxation to support your body's recovery
+            and resilience.
+          </div>
+        </div>
+        <div class="health-shape">
+          <div class="health-icon">
+            <img src="/img/HealthPage/icons8-relationship-100.png" alt="">
+          </div>
+          <div class="health-text">
+            Relationships
+          </div>
+          <div class="health-info">
+            Cultivate positive connections for emotional support and a fulfilling
+            life.
+          </div>
+        </div>
+        <div class="health-shape">
+          <div class="health-icon">
+            <img src="/img/HealthPage/icons8-stress-100.png" alt="">
+          </div>
+          <div class="health-text">
+            Stress
+          </div>
+          <div class="health-info">
+            Manage stress through healthy coping mechanisms to safeguard both mental
+            and physical health.
+          </div>
+        </div>
+        <div class="health-shape">
+          <div class="health-icon">
+            <img src="/img/HealthPage/icons8-puzzles-100.png" alt="">
+          </div>
+          <div class="health-text">
+            Mindset
+          </div>
+          <div class="health-info">
+            Nurture a positive mindset, embracing optimism and resilience for a healthier
+            lifestyle.
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Ai Assistent -->
+      <div id="AI_Assistent" class="ai-page">
+        <div class="video-container">
+          <video autoplay loop muted>
+            <source src="/Videos/AI.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="description-container">
+          <h1>
+            AI Assistant
+          </h1>
+          <p>
+            Meet our intelligent pain relief advisor - your friendly companion in
+            navigating discomfort. This chatbot provides personalized recommendations
+            for effective relief, ensuring your journey towards well-being is both
+            tailored and seamless. Say goodbye to unnecessary pain with our expert
+            guidance at your fingertips!
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Medicine -->
+    <div id="medicine-section" class="shape-container-wrapper">
+      <div class="arrow left" onclick="scrollShapes(-1)">
+        <img src="/img/Left.png" alt="">
+      </div>
+      <div class="txt-medicine">
+        <h1>
+          All our medicine
+        </h1>
+      </div>
+      <div class="shape1">
+        <img src="/img/medicine basket.png" alt="">
+        <h1>
+          BEST MEDICINE FOR YOU !!!
+        </h1>
+
+        <!-- Prescription Box -->
+        <div id="prescriptionBox1" class="prescription-box">
+          <span class="close-btn-pr" onclick="hidePrescription(1)">
+            &times;
+          </span>
+          <h2>
+            Prescription
+          </h2>
+          <p>
+            Please read the enclosed leaflet carefully before use.
+            <br>
+            Patient Information Leaflets are updated periodically by the manufacturer.
+            <br>
+            <br>
+            Swallow the tablets, preferably with a drink of water.
+            <br>
+            Adults and children 16 years and over: 1 or 2 tablets every 4-6 hours,
+            as required to a maximum of 8 tablets (4 doses) in any 24 hours.
+            <br>
+            Children 12 – 15 years: 1 to 1½ tablets every 4-6 hours, as required to
+            a maximum of 6 tablets (4 doses) in any 24 hours.
+            <br>
+            Children 10 – 12 years: 1 tablet every 4-6 hours, as required to a maximum
+            of 4 tablets (4 doses) in any 24 hours.
+            <br>
+            Children 6 – 10 years: Half a tablet every 4-6 hours, as required to a
+            maximum of 2 tablets (4 doses) in any 24 hours.
+            <br>
+            <br>
+            Do not give to children under 6 years.
+            <br>
+            Do not take more often than every 4 hours.
+            <br>
+            Do not take for more than 3 days unless instructed by your doctor.
+            <br>
+            <br>
+            Hazards and Cautions
+            <br>
+            Do not take more medicine than the label tells you to.
+            <br>
+            If you do not get better, talk to your doctor.
+            <br>
+            Do not take anything else containing paracetamol while taking this medicine.
+            <br>
+            Talk to a doctor at once if you take too much of this medicine, even if
+            you feel well.
+            <br>
+            <br>
+            Storage
+            <br>
+            Keep all medicines out of the sight and reach of children.
+            <br>
+            Do not use after the expiry date shown on the end flap of the carton.
+            <br>
+            <br>
+            Precautions
+            <br>
+            This is a medicine;
+            <br>
+            Consult your doctor or pharmacist if you have an underlying medical condition,
+            are taking any other medication or complementary therapy, or if symptoms
+            persist.
+            <br>
+            Seek advice before using if you are pregnant, planning to become pregnant,
+            breastfeeding or if you suffer from allergies.
+            <br>
+            <br>
+            Active ingredients Paracetamol
+          </p>
+        </div>
+        <div id="prescriptionBox2" class="prescription-box">
+          <span class="close-btn-pr" onclick="hidePrescription(2)">
+            &times;
+          </span>
+          <h2>
+            Prescription
+          </h2>
+          <p>
+            Please read the enclosed leaflet carefully before use.
+            <br>
+            Patient Information Leaflets are updated periodically by the manufacturer.
+            <br>
+            <br>
+            Ibuprofen 400 mg BP Tablets, manufactured by Strava Healthcare Private
+            Limited, are a nonsteroidal anti-inflammatory drug (NSAID) used for the
+            relief of pain, inflammation, and fever. Each tablet contains 400 mg of
+            Ibuprofen, the active ingredient known for its analgesic, anti-inflammatory,
+            and antipyretic properties.
+            <br>
+            <br>
+            Pain Relief and Inflammation Reduction: Ibuprofen is a well-known NSAID
+            that helps alleviate various types of pain, including headaches, dental
+            pain, menstrual cramps, muscle aches, and arthritis. It works by inhibiting
+            the production of prostaglandins, substances in the body that cause pain,
+            inflammation, and fever. Fever Reduction: Ibuprofen 400 mg tablets are
+            also effective in reducing fever associated with common illnesses, infections,
+            and inflammatory conditions. By reducing fever, they provide relief from
+            discomfort and promote a more comfortable state. Trusted Manufacturer:
+            Strava Healthcare Private Limited is a reputable pharmaceutical company
+            known for its commitment to quality and patient safety. The company follows
+            stringent manufacturing practices to ensure the production of reliable
+            and effective medications. The Ibuprofen 400 mg BP Tablets are manufactured
+            under strict quality control measures to ensure their efficacy.
+            <br>
+            <br>
+            Usage and Dosage: The tablets are designed for oral administration and
+            should be taken as directed by a healthcare professional or according to
+            the instructions on the packaging. The dosage and frequency of administration
+            may vary depending on the individual's age, weight, and the severity of
+            the condition. It is important to adhere to the recommended dosage and
+            not exceed the maximum daily limit of Ibuprofen.
+            <br>
+            <br>
+            Precautions and Side Effects: Ibuprofen may have potential side effects,
+            and it is important to be aware of them before using the medication. Common
+            side effects may include gastrointestinal disturbances, such as stomach
+            pain, nausea, and indigestion. It is important to consult a healthcare
+            professional for guidance and to report any adverse reactions. Individuals
+            with certain medical conditions, such as stomach ulcers, asthma, or kidney
+            problems, or those taking other medications, should consult their healthcare
+            provider before using this product to avoid potential interactions or contraindications.
+            <br>
+            <br>
+            Warnings and Precautions: Ibuprofen should be used with caution and under
+            medical supervision in certain populations, including the elderly, individuals
+            with liver or kidney impairment, and pregnant or breastfeeding women. It
+            is important to read and follow the warnings and precautions provided in
+            the packaging and consult a healthcare professional if there are any concerns
+            or questions.
+            <br>
+            <br>
+            Note: Ibuprofen 400 mg BP Tablets should only be used for the relief of
+            pain, inflammation, and fever. It is important to consult a healthcare
+            professional if symptoms persist or worsen. The tablets should be kept
+            out of reach of children and stored in a cool, dry place.
+            <br>
+            <br>
+            Please consult the packaging or reach out to Strava Healthcare Private
+            Limited for more detailed information about the product, including any
+            specific warnings or precautions.
+          </p>
+        </div>
+        <div id="prescriptionBox3" class="prescription-box">
+          <span class="close-btn-pr" onclick="hidePrescription(3)">
+            &times;
+          </span>
+          <h2>
+            Prescription
+          </h2>
+          <p>
+            Please read the enclosed leaflet carefully before use.
+            <br>
+            Patient Information Leaflets are updated periodically by the manufacturer.
+            <br>
+            <br>
+            Nitrostat® is a sublingual tablet that is used to treat Angina. Nitrostat
+            is a form of nitroglycerin. After the tablet dissolves under your tongue,
+            nitroglycerin is released. The nitroglycerin enters your bloodstream and
+            helps improve blood flow to your heart.
+            <br>
+            <br>
+            Nitrostat is used to prevent or relieve chest pain caused by angina. Nitrostat
+            may also be used for purposes not listed in this medication guide.
+            <br>
+            <br>
+            Angina is a pain or discomfort that feels like a pressure or squeezing
+            in your chest. The pain may also spread to your shoulders, arms, neck,
+            jaw, or back. Nitrostat can relieve the pain of angina quickly.
+            <br>
+            <br>
+          </p>
+        </div>
+        <div id="prescriptionBox4" class="prescription-box">
+          <span class="close-btn-pr" onclick="hidePrescription(4)">
+            &times;
+          </span>
+          <h2>
+            Prescription
+          </h2>
+          <p>
+            Please read the enclosed leaflet carefully before use.
+            <br>
+            Patient Information Leaflets are updated periodically by the manufacturer.
+            <br>
+            <br>
+            Composition: Feldene contains as active ingredient piroxicam 10 mg in
+            the form of capsules and 20 mg/ml in the form of intramuscular injection
+            solution (1ml ampoules).
+            <br>
+            <br>
+            Indications: Feldene is a non-steroidal anti-inflammatory drug indicated
+            in a variety of conditions requiring anti-inflammatory and/or analgesic
+            action , such as: rheumatoid arthritis, juvenile rheumatoid arthritis ,
+            osteoarthritis (arthrosis, degenerative diseases of the joints), ankylopoietic
+            spondylitis, acute musculoskeletal diseases , gout in the acute phase,
+            pain generated by surgery or acute trauma, treatment of primary dysmenorrhea
+            in patients aged 12 years and over and relief of fever and pain associated
+            with inflammation of the upper respiratory tract.
+            <br>
+            <br>
+            Contraindications: Active peptic ulcer. Feldene should not be administered
+            to patients who have previously shown hypersensitivity to the drug. There
+            is a possibility of cross-sensitivity with acetylsalicylic acid and other
+            non-steroidal anti-inflammatory agents. Feldene should not be used in patients
+            in whom acetylsalicylic acid or other non-steroidal anti-inflammatory drugs
+            cause symptoms of asthma, nasal polyposis , angioedema or urticaria .
+            <br>
+            <br>
+            Precautions: Feldene can rarely produce peptic ulcers, perforations and
+            gastrointestinal bleeding, in rare cases fatal. Therefore, the administration
+            of this drug in patients with a history of upper gastrointestinal diseases
+            must be closely supervised. in rare cases, non-steroidal anti-inflammatory
+            drugs can produce interstitial nephritis, glomerulitis, papillary necrosis
+            and nephrotic syndrome. non-steroidal anti-inflammatory drugs inhibit the
+            synthesis of renal prostaglandins that play a supporting role in maintaining
+            renal perfusion in patients with low renal blood flow and blood volume.
+            In these patients, the administration of non-steroidal anti-inflammatory
+            drugs can precipitate renal decompensation, which is followed by the return
+            to the pre-treatment state after stopping the therapy with these drugs.
+            Patients at increased risk for such reactions are those with congestive
+            heart failure, liver cirrhosis, nephrotic syndrome and manifest renal failure.
+            These patients must be carefully monitored during treatment with non-steroidal
+            anti-inflammatory agents. Due to possible adverse ophthalmic reactions
+            of non-steroidal anti-inflammatory agents, it is recommended that patients
+            who experience visual disturbances during treatment with Feldene consult
+            an ophthalmologist. When used to relieve pain or inflammation in the upper
+            respiratory tract, it should be known that non-steroidal anti-inflammatory
+            agents are only a symptomatic treatment. If it is used in these cases,
+            an appropriate antibiotic treatment must be taken into account at the same
+            time.
+            <br>
+            <br>
+            Side effects: Feldene is generally well tolerated. The most common side
+            effects encountered are gastrointestinal, but they usually do not lead
+            to discontinuation of treatment. These side effects include stomatitis,
+            nausea, anorexia, constipation, abdominal discomfort, flatulence, diarrhea,
+            abdominal pain, indigestion. Gastrointestinal bleeding, perforations, ulcerations
+            have also been reported with the administration of Feldene (see the chapter
+            "Warnings and special precautions"). The objective evaluation of the appearance
+            of the gastric mucosa and intestinal blood loss showed that 20 mg of Feldene
+            per day, administered as a single or divided dose, is much less irritating
+            to the gastrointestinal tract than acetylsalicylic acid. Long-term administration
+            of a dose of 30 mg per day or more leads to an increased risk of gastrointestinal
+            side effects. Edema was observed in a small percentage of patients, especially
+            of the ankles. Effects on the central nervous system have rarely been observed:
+            dizziness, headache, drowsiness, insomnia, depression, nervousness, hallucinations,
+            mood changes, abnormal dreams, mental confusion, paresthesias and vertigo.
+            Blurred vision, palpebral edema, eye irritation have also been reported.
+            Routine ophthalmoscopy and slit-lamp examination revealed no ocular changes.
+            Tinnitus may occur. Dermal hypersensitivity reactions, usually in the form
+            of rash and itching, have been cited. Onycholysis and alopecia were rarely
+            mentioned. Also, rarely, they have been associated with the treatment of
+            photoallergic reactions. As with other non-steroidal anti-inflammatory
+            agents, Lyell's disease and Stevens-Johnson syndrome may occur in rare
+            cases. Vesiculobullous reactions were rarely cited.
+          </p>
+        </div>
+        <div id="prescriptionBox5" class="prescription-box">
+          <span class="close-btn-pr" onclick="hidePrescription(5)">
+            &times;
+          </span>
+          <h2>
+            Prescription
+          </h2>
+          <p>
+            Please read the enclosed leaflet carefully before use.
+            <br>
+            Patient Information Leaflets are updated periodically by the manufacturer.
+            <br>
+            <br>
+            Composition: One tablet contains propranolol 40 mg and excipients: lactose
+            monohydrate Super-Tab, corn starch, povidone K 30, talc, magnesium stearate.
+            Pharmacotherapeutic group: beta-blocking agents, non-selective beta-blockers.
+            <br>
+            <br>
+            Therapeutic indications Propranolol 40 mg is indicated in: hypertension;
+            prophylaxis of angina pectoris attacks ; long-term treatment after acute
+            myocardial infarction; treatment of heart rhythm disorders: sinus tachycardia,
+            supraventricular tachyarrhythmias (paroxysmal tachycardia, atrial flutter
+            and fibrillation, junctional tachycardia), ventricular arrhythmias (extrasystoles,
+            ventricular tachycardia); it is of choice in arrhythmias of sympathoadrenergic
+            pathogenesis; pheochromocytoma (in association with alpha-blockers); cardiovascular
+            disorders in hyperthyroid patients; hypertrophic cardiomyopathy; migraine;
+            essential tremor; states of anxiety due to sympathoadrenergic hyperactivity,
+            accompanied by tachycardia, palpitations, tensional oscillations and tremors.
+            <br>
+            <br>
+            Contraindications: hypersensitivity to propranolol or any of the excipients;
+            anaphylactic type reactions in the antecedents; bronchial asthma and chronic
+            obstructive bronchopneumopathy; therapeutically uncontrolled heart failure;
+            cardiogenic shock, marked arterial hypotension; sinus bradycardia ( 50
+            beats/min); sinus node disease (including sino-atrial block); atrioventricular
+            block of degree II and III; Raynaud s type phenomena and other peripheral
+            vasculospastic disorders; children under 6 years of age due to the pharmaceutical
+            form.
+            <br>
+            <br>
+            Precautions: In case of symptomatic bradycardia (55 beats/min), the dose
+            of propranolol should be reduced. Although treatment with beta-blockers
+            reduces the risk of arrhythmias, myocardial ischemia and hypertensive jumps,
+            during general anesthesia, the prevention of compensatory sympathoadrenergic
+            reactions favors hypotensive accidents during anesthesia. When beta-blocker
+            treatment cannot be interrupted (for example in coronary patients), it
+            is recommended to protect against vagal predominance by administering atropine;
+            general anesthetics that depress the heart will be avoided. It is recommended
+            to inform the anesthesiologist if the patient is under treatment with beta-blockers.
+            If it is necessary to interrupt this treatment, a break of 48 hours is
+            sufficient for the reappearance of the response to catecholamines. The
+            risk of anaphylactic reactions must be considered. In case of thyrotoxicosis,
+            beta-blockers can mask cardiovascular signs in hyperthyroid patients. Athletes
+            should be warned that propranolol and other beta-adrenergic blockers are
+            included in the list of doping substances.
+            <br>
+            <br>
+            Interaction: The association with antiarrhythmics (amiodarone, propafenone,
+            quinidine, disopyramide) can cause contractility, automatism and conductivity
+            disorders by inhibiting compensatory sympathetic mechanisms. Beta-blockers
+            reduce sympathetic cardiovascular compensatory reactions in the case of
+            association with halogenated anesthetics. Simultaneous administration with
+            calcium channel blockers (diltiazem, verapamil) increases the risk of myocardial
+            depression; such an association requires great caution and is contraindicated
+            in patients with cardiac risk. Propranolol increases the effect of antihypertensive
+            drugs; for antihypertensives with central action (methyldopa, clonidine,
+            reserpine) increases the bradycardic and conduction slowing effect. Tricyclic
+            antidepressants, neuroleptics and baclofen administered simultaneously
+            with propranolol increase the risk of orthostatic hypotension. Nonsteroidal
+            anti-inflammatory drugs (NSAIDs) and glucocorticoids decrease the antihypertensive
+            effect of propranolol by favoring hydrosaline retention. The association
+            with insulin or oral antidiabetics requires blood glucose monitoring (hypoglycemic
+            reactions are increased and prolonged, vegetative symptoms of hypoglycemia
+            are masked). Treatment with beta-blockers should be stopped, if possible,
+            before radiological investigations with iodinated contrast substances due
+            to the risk of severe adverse reactions. Cimetidine increases the plasma
+            concentration of propranolol by inhibiting its hepatic metabolism, increasing
+            the risk of adverse reactions (for example marked bradycardia). Propranolol
+            increases the plasma concentration of lidocaine by decreasing its hepatic
+            metabolism, increasing the risk of adverse cardiac and neurological reactions
+            of lidocaine. Enzyme inducers (for example phenobarbital, rifampicin) decrease
+            the plasma concentration of propranolol by accelerating hepatic metabolism,
+            diminishing its therapeutic effects. Magnesium, aluminum and calcium compounds
+            decrease the digestive absorption of propranolol. An interval of 2-3 hours
+            is recommended between the administration of these preparations and propranolol.
+            <br>
+            <br>
+            Special warnings: Treatment with propranolol should not be stopped suddenly
+            in patients with ischemic heart disease, because it can lead to serious
+            heart rhythm disorders, acute myocardial infarction or sudden death; doses
+            are gradually reduced. If necessary, another antianginal drug is introduced
+            during this period, to avoid aggravation of angina pectoris. In patients
+            with vasculospastic angina (Prinzmetal), propranolol, like other beta-blockers,
+            is not the medication of choice. It can be added to other antianginal drugs
+            when they are not effective enough. In patients with therapeutically controlled
+            heart failure, treatment should be initiated with low doses that can be
+            gradually increased under medical supervision. Due to the negative dromotropic
+            effect, beta-blockers should be administered with caution in patients with
+            first-degree atrioventricular block. In patients with pheochromocytoma,
+            alpha-blocker treatment must be instituted before the administration of
+            beta-blockers, in order to prevent the risk of increased blood pressure.
+            In the elderly, the treatment should be initiated with small doses and
+            under careful medical supervision. Caution is recommended in setting doses
+            in patients with liver and kidney failure. Diabetes monitoring is recommended;
+            certain signs and symptoms that may indicate a hypoglycemic reaction may
+            be masked (eg tachycardia, palpitations, sweating). The use of propranolol
+            in patients with inadequately controlled diabetes requires caution. Prolonged
+            administration of propranolol can cause an increase in triglycerides and,
+            to a lesser extent, an increase in plasma cholesterol; the clinical significance
+            of the increase in plasma lipids is not specified. When initiating treatment
+            with beta-blockers in patients with psoriasis, cases of aggravation of
+            the disease during treatment have been observed. In patients with a history
+            of severe anaphylactic reactions, especially to iodinated contrast agents,
+            as well as those under desensitization treatment, the administration of
+            beta-blockers can be an aggravating factor and has an antagonistic effect
+            on adrenaline.
+            <br>
+            <br>
+            If beta-blockers are administered to patients with liver cirrhosis and
+            digestive bleeding, the blood count, hematocrit and hemoglobinemia must
+            be checked periodically.
+          </p>
+        </div>
+      </div>
+      <div class="shape-container">
+        <div class="shape shape2">
+          <img src="/img/Pills/Head/Paracetamol.png" alt="">
+          <h1>
+            Boots Paracetamol 500mg Tablets
+          </h1>
+          <button type="button" onclick="showPrescription(1)">
+            Click me
+          </button>
+        </div>
+        <div class="shape shape3">
+          <img src="/img/Pills/Head/Ibuprofen.png" alt="">
+          <h1>
+            Ibuprofen 200mg – 24 Tablets
+          </h1>
+          <button type="button" onclick="showPrescription(2)">
+            Click me
+          </button>
+        </div>
+        <div class="shape shape4">
+          <img src="/img/Pills/Heart/Nitrogycerin.png" alt="">
+          <h1>
+            Nitrostat 0.4 mg Tablets
+          </h1>
+          <button type="button" onclick="showPrescription(3)">
+            Click me
+          </button>
+        </div>
+        <div class="shape shape5">
+          <img src="/img/Pills/Leg/image-removebg-preview (4).png" alt="">
+          <h1>
+            Feldene Melt Tablets 20mg
+          </h1>
+          <button type="button" onclick="showPrescription(4)">
+            Click me
+          </button>
+        </div>
+        <div class="shape shape6">
+          <img src="/img/Pills/Heart/Inderal.png" alt="">
+          <h1>
+            Propranolol Tablets 40MG (Inderal 40)
+          </h1>
+          <button type="button" onclick="showPrescription(5)">
+            Click me
+          </button>
+        </div>
+        <div id="Aleve" class="shape shape7">
+          <img src="/img/Pills/Leg/Aleve.png" alt="">
+          <h1>
+            Aleve Arthritis 220MG TAB, 12tab
+          </h1>
+          <button type="button" onclick="showPrescription(1)">
+            Click me
+          </button>
+        </div>
+        <div class="shape shape8">
+          <img src="/img/Pills/Stomach/Omeprazol.png" alt="">
+          <h1>
+            Omeprazol 20mg Tablets
+          </h1>
+          <button type="button" onclick="showPrescription(2)">
+            Click me
+          </button>
+        </div>
+        <div class="shape shape9">
+          <img src="/img/Pills/Stomach/Imozium.png" alt="">
+          <h1>
+            Imodium Instant Melts 12 Tablets
+          </h1>
+          <button type="button" onclick="showPrescription(3)">
+            Click me
+          </button>
+        </div>
+        <div class="shape shape10">
+          <img src="/img/Pills/Throat/Cepacol.png" alt="">
+          <h1>
+            Cepacol Lozenges Blackcurrant 24's
+          </h1>
+          <button type="button" onclick="showPrescription(4)">
+            Click me
+          </button>
+        </div>
+        <div class="shape shape11">
+          <img src="/img/Pills/Throat/Strepsils.png" alt="">
+          <h1>
+            Strepsils Extra Blackcurrent Throat
+          </h1>
+          <button type="button" onclick="showPrescription(5)">
+            Click me
+          </button>
+        </div>
+        <div class="shape shape12">
+          <img src="/img/Pills/Eye/Lutein.png" alt="">
+          <h1>
+            Eyevital LX 10 Softgel Capsules
+          </h1>
+          <button type="button" onclick="showPrescription(1)">
+            Click me
+          </button>
+        </div>
+        <div class="shape shape13">
+          <img src="/img/Pills/Eye/Sore .png" alt="">
+          <h1>
+            MURINE® Sore eyes, Drops
+          </h1>
+          <button type="button" onclick="showPrescription(2)">
+            Click me
+          </button>
+        </div>
+        <div class="shape shape14">
+          <img src="/img/Pills/Ear/Pain.png" alt="">
+          <h1>
+            Cl-ear Pain Relief Ear Drops
+          </h1>
+          <button type="button" onclick="showPrescription(3)">
+            Click me
+          </button>
+        </div>
+        <div class="shape shape15">
+          <img src="/img/Pills/Ear/Marie.png" alt="">
+          <h1>
+            Marie Originals Earache Relief Drops
+          </h1>
+          <button type="button" onclick="showPrescription(4)">
+            Click me
+          </button>
+        </div>
+        <div class="shape shape16">
+          <img src="/img/Pills/Genital/Aciclovir.png" alt="">
+          <h1>
+            Genital Herpes Treatment (Aciclovir)
+          </h1>
+          <button type="button" onclick="showPrescription(5)">
+            Click me
+          </button>
+        </div>
+        <div class="shape shape17">
+          <img src="/img/Pills/Genital/Lipsore.png" alt="">
+          <h1>
+            Lipsore 5% Cream, RelonChem
+          </h1>
+          <button type="button" onclick="showPrescription(6)">
+            Click me
+          </button>
+        </div>
+        <div class="shape shape18">
+          <img src="/img/Pills/Back/Backaid.png" alt="">
+          <h1>
+            Backaid Max Relief Caplets
+          </h1>
+          <button type="button" onclick="showPrescription(7)">
+            Click me
+          </button>
+        </div>
+        <div class="shape shape19">
+        </div>
+      </div>
+      <div class="arrow right" onclick="scrollShapes(1)">
+        <img src="/img/Right.png" alt="">
+      </div>
+    </div>
+
+    
+    <!--Footer-->
+    <footer id="footer" class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1">
+        </div>
+        <div class="wave" id="wave2">
+        </div>
+        <div class="wave" id="wave3">
+        </div>
+        <div class="wave" id="wave4">
+        </div>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-facebook">
+            </ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-twitter">
+            </ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-linkedin">
+            </ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-instagram">
+            </ion-icon>
+          </a>
+        </li>
+      </ul>
+      <p>
+        &copy;2024 Pharmacetical AI | All Rights Reserved
+      </p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
+    </script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
+    </script>
+    <!-- Chat bot -->
+    <div class="chat-circle" onclick="toggleChat()">
+      <img src="/img/Chatbot.png" alt="">
+    </div>
+    <div class="chat-container">
+      <div class="chat-header">
+        <h3>
+          Chatbot
+        </h3>
+        <div class="chat-toggle" onclick="toggleChat()">
+          &times;
+        </div>
+      </div>
+      <div class="chat-body" id="chatBody">
+        <div class="message received">
+          Hello. How can I help you?
+        </div>
+      </div>
+      <div class="chat-input">
+        <textarea id="userInput" placeholder="Text here..." rows="1">
+          </textarea>
+        <button onclick="sendMessage()">
+          Send
+        </button>
+      </div>
+    </div>
+    <script src="app.js" defer>
+    </script>
+    <script src="chat_script.js">
+    </script>
+  </div>
+</body>
+
+</html>
