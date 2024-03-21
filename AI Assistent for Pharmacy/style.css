@@ -46,7 +46,6 @@
      top: 0;
      left: 0;
      width: 100%;
-     background-color: #3ab3db;
      z-index: 1000;
 }
  .main-nav .logo {
@@ -78,6 +77,14 @@
      display: flex;
 }
 
+.main-nav .login {
+    float: right;
+}
+
+.main-nav .login li {    
+    margin-right: 240px;
+     /* Ajustează această valoare pentru poziționarea exactă */
+}
 /* ------------------------------------------------------------------
 ---------------------------------------------------------------------
 --------------------------------------------------------------------- */
@@ -313,7 +320,67 @@
 /* ------------------------------------------------------------------
 ---------------------------------------------------------------------
 --------------------------------------------------------------------- */
+/* Login form Styles */
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    display: none; 
+    position: fixed; 
+    top: 6%; 
+    left: 76.3%; 
+    z-index: 999; 
+}
 
+.form-container h2 {
+    color: #4CAF50; /* Green color for headings */
+    padding-bottom: 20px;
+  }
+
+  .form-container input[type="text"],
+  .form-container input[type="password"],
+  .form-container input[type="tel"],
+  .form-container button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .form-container button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    cursor: pointer;
+  }
+
+  .form-container p {
+    margin: 10px 0;
+  }
+
+  .form-container a {
+    color: #4CAF50; /* Green link color */
+    text-decoration: none;
+  }
+
+  .form-container .close-botn {
+    position: absolute;
+    top: 13px;
+    padding-right: 75px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    color: #008f13;
+    
+  }
+/* ------------------------------------------------------------------
+---------------------------------------------------------------------
+--------------------------------------------------------------------- */
 /* Registration form Styles */
  .blur {
      filter: blur(5px);

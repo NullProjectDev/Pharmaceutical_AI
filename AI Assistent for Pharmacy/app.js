@@ -39,6 +39,30 @@ function closeSuccessMessage() {
   document.querySelector('.container').classList.remove('blur');
 }
 
+// Funcția pentru comutarea între formularul de login și cel de înregistrare
+function toggleFormLogin() {
+  var loginForm = document.getElementById("loginForm");
+  var registerForm = document.getElementById("registerForm");
+
+  // Verifică dacă formularul de login este afișat și comută între ele
+  if (loginForm.style.display === "none") {
+    loginForm.style.display = "block";
+    registerForm.style.display = "none";
+  } else {
+    loginForm.style.display = "none";
+    registerForm.style.display = "block";
+  }
+}
+
+// Function to close Form
+function closeFormLogin() {
+  var loginForm = document.getElementById("loginForm");
+  var registerForm = document.getElementById("registerForm");
+  
+  loginForm.style.display = "none";
+  registerForm.style.display = "none";
+}
+
 function showPrescription(prescriptionNumber) {
   // Show the prescription box with the given prescription number
   var prescriptionBox = document.getElementById('prescriptionBox' + prescriptionNumber);

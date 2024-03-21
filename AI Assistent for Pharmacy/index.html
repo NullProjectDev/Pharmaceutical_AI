@@ -43,8 +43,33 @@
         </a>
       </li>
     </ul>
+
+    <ul class="login">
+      <li><a href="#" onclick="toggleFormLogin()">Login/Register</a></li>
+    </ul>
   </nav>
 
+<!-- Formularul de login -->
+<form id="loginForm" class="form-container">
+  <button class="close-botn" onclick="closeFormLogin()">&times</button>
+  <h2>Login</h2>
+  <input type="text" placeholder="Username" required>
+  <input type="password" placeholder="Password" required>
+  <button type="submit">Login</button>
+  <p>Don't have an account? <a href="#" onclick="toggleFormLogin()">Register here</a></p>
+</form>
+
+<!-- Formularul de înregistrare -->
+<form id="registerForm" class="form-container">
+  <button class="close-botn" onclick="closeFormLogin()">&times</button>
+  <h2>Register</h2>
+  <input type="text" placeholder="Username" required>
+  <input type="password" placeholder="Password" required>
+  <input type="password" placeholder="Repeat Password" required>
+  <input type="tel" placeholder="Phone Number" required>
+  <button type="submit">Register</button>
+  <p>Already have an account? <a href="#" onclick="toggleFormLogin()">Login here</a></p>
+</form>
 
   <!-- Registration Form -->
   <div id="registration-form" class="registration-form">
@@ -912,6 +937,8 @@
     </script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
     </script>
+
+
     <!-- Chat bot -->
     <div class="chat-circle" onclick="toggleChat()">
       <img src="/img/Chatbot.png" alt="">
